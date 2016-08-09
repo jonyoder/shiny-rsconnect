@@ -1,8 +1,9 @@
-library(shiny)
-library(shinyAce)
 library(knitr)
 library(rsconnect)
+library(shiny)
+library(shinyAce)
 
+# Default text for editor
 defaultMarkdown <- '
 ### Sample R Markdown
 ```{r}
@@ -36,6 +37,7 @@ ui <- shinyUI(
 #' @author Jeff Allen \email{jeff@@trestletech.com}
 server <- shinyServer(function(input, output, session) {
   
+  # Only update and deploy when the 'Update' button is clicked
   rmd <- eventReactive(input$eval, {
     input$rmd
   })
