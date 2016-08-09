@@ -7,20 +7,13 @@ library(rsconnect)
 #' @author Jeff Allen \email{jeff@@trestletech.com}
 ui <- shinyUI(
   bootstrapPage(
-    headerPanel("Shiny Ace knitr Example"),
+    headerPanel("Embedded Deployment Example"),
     div(
       class="container-fluid",
       div(class="row-fluid",
         div(class="col-sm-6",
           h2("Source R-Markdown"),  
-          aceEditor("rmd", mode="markdown", value='### Sample knitr Doc
-This is some markdown text. It may also have embedded R code
-which will be executed.
-```{r}
-2*3
-rnorm(5)
-```
-It can even include graphical elements.
+          aceEditor("rmd", mode="markdown", value='### Sample R Markdown
 ```{r}
 hist(rnorm(100))
 ```
