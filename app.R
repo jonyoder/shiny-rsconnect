@@ -12,7 +12,6 @@ hist(rnorm(100))
 '
 
 #' A Shiny UI for editing R Markdown
-#' @author Jeff Allen \email{jeff@@trestletech.com}
 ui <- shinyUI(
   bootstrapPage(
     headerPanel("Embedded Deployment Example"),
@@ -34,7 +33,6 @@ ui <- shinyUI(
 )
 
 #' A Shiny application that generates and deploys R Markdown content
-#' @author Jeff Allen \email{jeff@@trestletech.com}
 server <- shinyServer(function(input, output, session) {
   
   # Only update and deploy when the 'Update' button is clicked
