@@ -3,7 +3,14 @@ library(shinyAce)
 library(knitr)
 library(rsconnect)
 
-#' Define UI for application that demonstrates a simple Ace editor
+defaultMarkdown <- '
+### Sample R Markdown
+```{r}
+hist(rnorm(100))
+```
+'
+
+#' A Shiny UI for editing R Markdown
 #' @author Jeff Allen \email{jeff@@trestletech.com}
 ui <- shinyUI(
   bootstrapPage(
@@ -13,11 +20,7 @@ ui <- shinyUI(
       div(class="row-fluid",
         div(class="col-sm-6",
           h2("Source R-Markdown"),  
-          aceEditor("rmd", mode="markdown", value='### Sample R Markdown
-```{r}
-hist(rnorm(100))
-```
-'),
+          aceEditor("rmd", mode="markdown", value=defaultMarkdown),
           actionButton("eval", "Update")
         ),
         div(class="col-sm-6",
@@ -29,7 +32,7 @@ hist(rnorm(100))
   )
 )
 
-#' Define server logic required to generate simple ace editor
+#' A Shiny application that generates and deploys R Markdown content
 #' @author Jeff Allen \email{jeff@@trestletech.com}
 server <- shinyServer(function(input, output, session) {
   
@@ -41,7 +44,7 @@ server <- shinyServer(function(input, output, session) {
     writeLines(rmd(), "out.Rmd")
     knit2html(input="out.Rmd", fragment.only = TRUE, quiet = TRUE)
     options(repos=c(CRAN="https://cran.rstudio.com"))
-    rsconnect::deployDoc(doc="out.Rmd", appName="JonsDoc", account="admin", server="mytestserver")
+    rsconnect::deployDoc(doc="out.Rmd", appName="GeneratedDoc", account="admin", server="mytestserver")
     return(isolate(HTML(
       readLines("out.html")
     )))
