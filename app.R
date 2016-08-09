@@ -25,15 +25,15 @@ ui <- shinyUI(
     div(
       class="container-fluid",
       div(class="row-fluid",
-        div(class="col-sm-6",
-          h2("Source R-Markdown"),  
-          aceEditor("rmd", mode="markdown", value=defaultMarkdown),
-          actionButton("eval", "Update")
-        ),
-        div(class="col-sm-6",
-          h2("Knitted Output"),
-          htmlOutput("knitDoc")
-        )
+          div(class="col-sm-6",
+              h2("Source R-Markdown"),  
+              aceEditor("rmd", mode="markdown", value=defaultMarkdown),
+              actionButton("eval", "Update")
+          ),
+          div(class="col-sm-6",
+              h2("Knitted Output"),
+              htmlOutput("knitDoc")
+          )
       )
     )
   )
