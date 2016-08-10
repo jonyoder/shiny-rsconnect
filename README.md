@@ -60,14 +60,3 @@ for `Connect User` and `Connect Server Name` are correct:
   in to Connect during the `Configuring rsconnect` step, above
 - `Connect Server Name` - The arbitrary Connect server name you chose
   (`mylocaldeployserver` in the instructions above)
-
-### CRAN Note
-If you don't already have it in an `RProfile`, be sure to specify a
-default CRAN repository in your application before
-issuing the `rsconnect` command to deploy content. For example:
-
-```R
-options(repos=c(CRAN="https://cran.rstudio.com"))
-rsconnect::deployDoc(doc="out.Rmd", appName="ServerDeployedDoc", account="rwhite", server="mylocaldeployserver")
-```
-
