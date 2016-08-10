@@ -48,7 +48,7 @@ Authenticate with your Connect user credentials.
 After successfully connecting your Connect account to `rsconnect`, you
 should see this message at the R console:
 
-> Account registered successfully: [First Name] [Last Name] ([username])
+> Account registered successfully: First Name Last Name (username)
 
 ### Deploying Content with rsconnect
 
@@ -58,6 +58,6 @@ are correct:
 
 | Field | Description |
 |-------|-------------|
-| `Connect User` | The Connect user account you used when you logged in to Connect during the `Configuring rsconnect` step, above  |
-| `Connect Server Name` | The arbitrary Connect server name you chose (`mylocaldeployserver` in the instructions above) |
+| *Connect User* | The Connect user account you used when you logged in to Connect during the `Configuring rsconnect` step, above  |
+| *Connect Server Name* | The arbitrary Connect server name you chose (`mylocaldeployserver` in the instructions above) |
 
