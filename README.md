@@ -4,7 +4,7 @@
 
 It is possible to use the `rsconnect` R package to programmatically deploy
 content. This is a Shiny application that demonstrates programmatic deployment
-with `rsconnect` from a Shiny application.
+with `rsconnect` (to Connect) from a Shiny application.
 
 ## Setup
 
