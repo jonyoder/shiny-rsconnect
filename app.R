@@ -2,6 +2,7 @@ library(knitr)
 library(rsconnect)
 library(shiny)
 library(shinyAce)
+library(rmarkdown)
 
 # Default text for editor
 defaultMarkdown <- '
