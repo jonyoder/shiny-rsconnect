@@ -48,15 +48,16 @@ Authenticate with your Connect user credentials.
 After successfully connecting your Connect account to `rsconnect`, you
 should see this message at the R console:
 
-> Account registered successfully: <First Name> <Last Name> (<username>)
+> Account registered successfully: [First Name] [Last Name] ([username])
 
 ### Deploying Content with rsconnect
 
 Now `rsconnect` is configured for deploying content to Connect. Before
 clicking the `Deploy Output` button, make sure the input field values
-for `Connect User` and `Connect Server Name` are correct:
+are correct:
 
-- `Connect User` - The Connect user account you used when you logged
-  in to Connect during the `Configuring rsconnect` step, above
-- `Connect Server Name` - The arbitrary Connect server name you chose
-  (`mylocaldeployserver` in the instructions above)
+| Field | Description |
+|-------|-------------|
+| `Connect User` | The Connect user account you used when you logged in to Connect during the `Configuring rsconnect` step, above  |
+| `Connect Server Name` | The arbitrary Connect server name you chose (`mylocaldeployserver` in the instructions above) |
+
