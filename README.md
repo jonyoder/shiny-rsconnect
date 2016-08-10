@@ -58,6 +58,6 @@ are correct:
 
 | Field | Description |
 |-------|-------------|
-| *Connect User* | The Connect user account you used when you logged in to Connect during the `Configuring rsconnect` step, above  |
-| *Connect Server Name* | The arbitrary Connect server name you chose (`mylocaldeployserver` in the instructions above) |
+| **Connect User** | The Connect user account you used when you logged in to Connect during the `Configuring rsconnect` step, above  |
+| **Connect Server Name** | The arbitrary Connect server name you chose (`mylocaldeployserver` in the instructions above) |
 
